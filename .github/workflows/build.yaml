@@ -43,7 +43,7 @@ jobs:
       run: |
          gomobile init
          go mod tidy
-         gomobile bind -v -androidapi 19 -ldflags='-s -w' ./
+         gomobile bind -target=android ./
     - name: Upload sing-box to release
       uses: svenstaro/upload-release-action@v2
       with:
